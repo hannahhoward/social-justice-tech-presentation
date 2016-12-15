@@ -57,7 +57,7 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#6D348D",
+  primary: "#AC80C4",
   secondary: "black",
   tertiary: "#D3BB47"
 });
@@ -71,12 +71,27 @@ const alignCenter = {
 const notes = {
   endJourney: `
      -- I've been on all sides of the tech and social justice, multiple times
-     -- my life is pretty split these days
+     <br />-- my life is pretty split these days
   `,
   checkPrivilege: `
      -- thought about putting this at the end, cause it's hard and controversial
-     -- but feel it's almost a prerequisite to doing anything
+     <br />-- but feel it's almost a prerequisite to doing anything
   `,
+  interviewStory: `
+     -- I worked for a small company that folded
+     <br />-- in the month after folding we got "group interviewed" by a large tech company
+     <br />-- we were a pretty diverse group
+     <br />-- in the time after we discussed salaries
+     <br />-- and then right after I went to this trans feminist support group
+     <br />-- uber driving / multiple jobs / $11/hr, unemployment, mental health issues, 
+     not cheap enough therapy
+  `,
+  needsStories: `
+     - Class privilege - going to school, doing flash project, and paying no attention
+     - The Website Collaboration 
+     - My coworker
+     -
+     `,
   default: ''
 }
 
@@ -162,6 +177,7 @@ export default class Presentation extends React.Component {
               <Appear><ListItem>Privacy</ListItem></Appear>
               <Appear><ListItem>Online Infrastructure</ListItem></Appear>
               <Appear><ListItem>Resources!</ListItem></Appear>
+              <Appear><ListItem>Hardware!</ListItem></Appear>
               <Appear><ListItem>Hacking?</ListItem></Appear>
             </List>
           </Slide>
@@ -270,7 +286,7 @@ export default class Presentation extends React.Component {
                Checking Privilege
             </Heading>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
+          <Slide transition={["slide"]} bgColor="black" notes={notes.interviewStory}>
             <Heading size={1} caps textColor="primary">
               Story: The Bizarre Interview And The Meeting After
             </Heading>
@@ -327,7 +343,7 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
+          <Slide transition={["slide"]} bgColor="black" notes={notes.needsStories}>
             <Heading size={1} caps textColor="primary">
               Many Stories Of Techies Not Paying Attention
             </Heading>
@@ -374,6 +390,7 @@ export default class Presentation extends React.Component {
               Story: The Privacy Solution That Wasn't
             </Heading>
           </Slide>
+
           <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
             <Heading size={3} caps textColor="primary">
                Lessons
@@ -421,72 +438,25 @@ export default class Presentation extends React.Component {
                Long-term Collaboration -> Real Success.
             </Heading>
           </Slide>
+          
+          <Slide transition={["slide"]} bgColor="black" notes={notes.needsStories}>
+            <Heading size={1} caps textColor="primary">
+               A Couple Successful Tech Stories
+            </Heading>
+          </Slide>
 
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
-            </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And lets not forget **bold**
-              `}
-            </Markdown>
-          </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
-            </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
-          </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>React-Router navigation</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
-            </Heading>
-            <Interactive/>
-          </Slide>
           <Slide transition={["spin", "slide"]} bgColor="tertiary">
             <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
+              Let's Discuss.
             </Heading>
-            <Link href="http://www.formidablelabs.com"><Image width="100%" src={images.logo}/></Link>
+          </Slide>
+          <Slide transition={["spin", "slide"]} bgColor="tertiary">
+            <Heading size={1} caps fit lineHeight={1.5} textColor="black">
+              The End
+            </Heading>
+            <Link href="http://socialjusticetech-presentation.techgirlwonder.com">
+               http://socialjusticetech-presentation.techgirlwonder.com
+            </Link>
           </Slide>
         </Deck>
       </Spectacle>
