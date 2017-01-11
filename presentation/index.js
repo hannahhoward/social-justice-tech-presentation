@@ -89,9 +89,12 @@ const notes = {
   needsStories: `
      - Class privilege - going to school, doing flash project, and paying no attention
      - The Website Collaboration 
-     - My coworker
-     -
      `,
+  privacyStory: `
+     - Running all communication off a wiki
+     - SSL on website
+  `,
+  driveByTechTeam: ``,
   default: ''
 }
 
@@ -141,7 +144,7 @@ export default class Presentation extends React.Component {
             <List>
               <Appear><ListItem>You have something to contribute!</ListItem></Appear>
               <Appear><ListItem>How I ended up here</ListItem></Appear>
-              <Appear><ListItem>Checking privilege</ListItem></Appear>
+              <Appear><ListItem>Understanding difference</ListItem></Appear>
               <Appear><ListItem>Listening to needs</ListItem></Appear>
               <Appear><ListItem>Adjusting Expectations</ListItem></Appear>
               <Appear><ListItem>Sustained Commitment</ListItem></Appear>
@@ -183,7 +186,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
             <Heading size={1} caps textColor="primary" >
-               We face a hard fight
+               We're in a tough situation
             </Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
@@ -283,7 +286,7 @@ export default class Presentation extends React.Component {
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes={notes.checkPrivilege}>
             <Heading size={3} fit caps textColor="black">
-               Checking Privilege
+               Understanding Difference
             </Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="black" notes={notes.interviewStory}>
