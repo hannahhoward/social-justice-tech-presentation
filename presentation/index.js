@@ -79,22 +79,77 @@ const notes = {
   `,
   interviewStory: `
      -- I worked for a small company that folded
-     <br />-- in the month after folding we got "group interviewed" by a large tech company
-     <br />-- we were a pretty diverse group
-     <br />-- in the time after we discussed salaries
-     <br />-- and then right after I went to this trans feminist support group
-     <br />-- uber driving / multiple jobs / $11/hr, unemployment, mental health issues, 
-     not cheap enough therapy
+     -- in the month after folding we got "group interviewed" by a large tech company
+     -- we were a pretty diverse group
+     -- in the time after we discussed salaries
+     -- and then right after I went to this trans feminist support group
+     -- uber driving / multiple jobs / $11/hr, unemployment, mental health issues, not cheap enough therapy`,
+  interviewStoryLessons: `
+            <ul>
+              <li>We are stratified</li>
+              <li>Work Hard != Success</li>
+              <li>Get outside your neighborhood</li>
+              <li>Best contribution may be money</li>
+            </ul>
   `,
   needsStories: `
-     - Class privilege - going to school, doing flash project, and paying no attention
-     - The Website Collaboration 
-     `,
+     -- Class privilege - going to school, doing flash project, and paying no attention to hardware
+     -- The Website Collaboration`,
+  needsStoriesLessons: ` 
+     <ul>
+       <li>Understand the problem first</li>
+       <li>You are not a subject expert.</li>
+       <li>The problem is not lack of tech.</li>
+       <li>Prefer Additive To Disruptive.</li>
+    </ul>`,
   privacyStory: `
+     - Vanguard paranoia
      - Running all communication off a wiki
-     - SSL on website
+     - SSL on website using self signed certificate`,
+  privacyStoryLessons: `
+     <ul>
+        <li>Solutions Only Valuable If Used</li>
+        <li>Don't Assume Expertise</li>
+        <li>Don't Assume Hardware</li>
+        <li>Don't Assume Access</li>
+     </ul>     
   `,
-  driveByTechTeam: ``,
+  driveByTechTeam: `
+    -- working in non profit
+    -- got hours donated
+    -- came in an set up
+    -- insulted -- you can watch
+    -- became the IT manager accidentally
+  `,
+  driveByTechTeamLessons: `
+
+          <ul>
+             <li>
+               Stick Around And Finish The Job.
+            </li>
+            <li>
+              Plan for Maintainence.
+            </li>
+            <li>
+               Long-term Collaboration -> Real Success.
+            <li>
+        </ul>
+  `,
+  goodTech: `
+     -- came into a tough situation
+     -- spent a lot of time understanding the business needs
+     -- had a PM
+     -- sustained Commitment
+     -- made exceptions
+     -- followed up
+     -- handed off
+
+     privacy training:
+        -- kept it simple
+        -- kept it relevant
+        -- had the relationships
+        -- gave context and made appropriate for audience
+  `,
   default: ''
 }
 
@@ -118,6 +173,20 @@ export default class Presentation extends React.Component {
             </Appear>
           </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
+            <Heading size={3} caps textColor="tertiary">
+               Agenda
+            </Heading>
+            <List>
+              <Appear><ListItem>Who am I?</ListItem></Appear>
+              <Appear><ListItem>You have something to contribute!</ListItem></Appear>
+              <Appear><ListItem>Understanding difference</ListItem></Appear>
+              <Appear><ListItem>Listening to needs</ListItem></Appear>
+              <Appear><ListItem>Adjusting Expectations</ListItem></Appear>
+              <Appear><ListItem>Sustained Commitment</ListItem></Appear>
+              <Appear><ListItem>Let's discuss!</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
             <Layout>
               <Fit>
                 <Appear>
@@ -130,81 +199,11 @@ export default class Presentation extends React.Component {
                 </Heading>
                 <List>
                   <Appear><ListItem>Hannah Howard</ListItem></Appear>
-                  <Appear><ListItem>Programmer/Proud SJW</ListItem></Appear>
-                  <Appear><ListItem>hannah@techgirlwonder.com</ListItem></Appear>
+                  <Appear><ListItem>hannah@carbonfive.com</ListItem></Appear>
                   <Appear><ListItem>Twitter above!</ListItem></Appear>
                 </List>
               </Fill>
             </Layout>
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
-            <Heading size={3} caps textColor="tertiary">
-               Agenda
-            </Heading>
-            <List>
-              <Appear><ListItem>You have something to contribute!</ListItem></Appear>
-              <Appear><ListItem>How I ended up here</ListItem></Appear>
-              <Appear><ListItem>Understanding difference</ListItem></Appear>
-              <Appear><ListItem>Listening to needs</ListItem></Appear>
-              <Appear><ListItem>Adjusting Expectations</ListItem></Appear>
-              <Appear><ListItem>Sustained Commitment</ListItem></Appear>
-              <Appear><ListItem>Let's discuss!</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={3} fit caps textColor="primary">
-               So...
-            </Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={2} caps fit textColor="primary" textFont="primary">
-              #CurrentMood
-            </Heading>
-            <Image src={images.ghostbusters.replace("/", "")} width="900px" margin="40px auto 0px"/>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={3} fit caps textColor="primary">
-               Good News!
-            </Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={1} fit caps textColor="primary">
-               You have lots to contribute!
-            </Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={3} caps textColor="primary">
-               Techies can help with....
-            </Heading>
-            <List textColor="tertiary">
-              <Appear><ListItem>Privacy</ListItem></Appear>
-              <Appear><ListItem>Online Infrastructure</ListItem></Appear>
-              <Appear><ListItem>Resources!</ListItem></Appear>
-              <Appear><ListItem>Hardware!</ListItem></Appear>
-              <Appear><ListItem>Hacking?</ListItem></Appear>
-            </List>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={1} caps textColor="primary" >
-               We're in a tough situation
-            </Heading>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={1} fit caps textColor="primary">
-               Everyone has a role to play
-            </Heading>
-            <Image src={images.andMyAxe.replace("/", "")} margin="100px auto 0px"/>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <Heading size={1} fit caps textColor="primary">
-               We can do it well or...<br />not.
-            </Heading>
-            <Image src={images.dontFuckItUp.replace("/", "")} width="900px" margin="40px auto 0px"/>
-          </Slide>
-          <Slide transition={["zoom", "fade"]} bgColor="primary" notes="">
-            <Heading size={1} fit caps textColor="black">
-               #AboutMe #PartDeux
-            </Heading>
           </Slide>
           <Slide transition={["slide"]} bgColor="black">
              <Heading size={1} fit caps lineHeight={1}>
@@ -284,6 +283,46 @@ export default class Presentation extends React.Component {
               </Fill>
             </Layout>
           </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={3} fit caps textColor="primary">
+               So...
+            </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={2} caps fit textColor="primary" textFont="primary">
+              #CurrentMood
+            </Heading>
+            <Image src={images.ghostbusters.replace("/", "")} width="900px" margin="40px auto 0px"/>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={3} fit caps textColor="primary">
+               Good News!
+            </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={3} caps textColor="primary">
+               Techies can help with....
+            </Heading>
+            <List textColor="tertiary">
+              <Appear><ListItem>Privacy</ListItem></Appear>
+              <Appear><ListItem>Online Infrastructure</ListItem></Appear>
+              <Appear><ListItem>Resources!</ListItem></Appear>
+              <Appear><ListItem>Hardware!</ListItem></Appear>
+              <Appear><ListItem>Hacking?</ListItem></Appear>
+            </List>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1} fit caps textColor="primary">
+               Everyone has a role to play
+            </Heading>
+            <Image src={images.andMyAxe.replace("/", "")} margin="100px auto 0px"/>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black">
+            <Heading size={1} fit caps textColor="primary">
+               We can do it well or...<br />not.
+            </Heading>
+            <Image src={images.dontFuckItUp.replace("/", "")} width="900px" margin="40px auto 0px"/>
+          </Slide>
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes={notes.checkPrivilege}>
             <Heading size={3} fit caps textColor="black">
                Understanding Difference
@@ -294,17 +333,13 @@ export default class Presentation extends React.Component {
               Story: The Bizarre Interview And The Meeting After
             </Heading>
           </Slide>
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={3} caps textColor="primary">
+
+          <Slide transition={["slide"]} bgColor="black" notes={notes.interviewStoryLessons}>
+            <Heading size={1} fit caps textColor="primary">
                Lessons
             </Heading>
-            <List textColor="tertiary">
-              <Appear><ListItem>We are stratified</ListItem></Appear>
-              <Appear><ListItem>Work Hard != Success</ListItem></Appear>
-              <Appear><ListItem>Get outside your neighborhood</ListItem></Appear>
-              <Appear><ListItem>Best contribution may be money</ListItem></Appear>
-            </List>
           </Slide>
+
           <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
             <Heading size={1} caps textColor="primary">
                Learn Some Stuff
@@ -352,33 +387,9 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
+          <Slide transition={["slide"]} bgColor="black" notes={notes.needsStoriesLessons}>
             <Heading size={1} fit caps textColor="primary">
                Lessons
-            </Heading>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={1} fit caps textColor="tertiary">
-               Understand the problem first.
-            </Heading>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={1} fit caps textColor="tertiary">
-               You are not a subject expert.
-            </Heading>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={1} fit caps textColor="tertiary">
-               The problem is not lack of tech.
-            </Heading>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={1} fit caps textColor="tertiary">
-               Prefer Additive To Disruptive.
             </Heading>
           </Slide>
 
@@ -388,61 +399,37 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
+          <Slide transition={["slide"]} bgColor="black" notes={notes.privacyStory}>
             <Heading size={1} caps textColor="primary">
               Story: The Privacy Solution That Wasn't
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={3} caps textColor="primary">
+          <Slide transition={["slide"]} bgColor="black" notes={notes.privacyStoryLessons}>
+            <Heading size={1} fit caps textColor="primary">
                Lessons
             </Heading>
-            <List textColor="tertiary">
-              <Appear><ListItem>Solutions Only Valuable If Used</ListItem></Appear>
-              <Appear><ListItem>Don't Assume Expertise</ListItem></Appear>
-              <Appear><ListItem>Don't Assume Hardware</ListItem></Appear>
-              <Appear><ListItem>Don't Assume Access</ListItem></Appear>
-            </List>
           </Slide>
-          
+
           <Slide transition={["zoom", "fade"]} bgColor="primary" notes={notes.default}>
             <Heading size={3} fit caps textColor="black">
                Sustained Commitment
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
+          <Slide transition={["slide"]} bgColor="black" notes={notes.driveByTechTeam}>
             <Heading size={1} caps textColor="primary">
               Story: The Drive-By Tech Team
             </Heading>
           </Slide>
-          
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
+
+          <Slide transition={["slide"]} bgColor="black" notes={notes.driveByTechTeam}>
             <Heading size={1} fit caps textColor="primary">
                Lessons
             </Heading>
           </Slide>
 
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={1} fit caps textColor="tertiary">
-               Stick Around And Finish The Job.
-            </Heading>
-          </Slide>
-
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={1} fit caps textColor="tertiary">
-               Plan for Maintainence.
-            </Heading>
-          </Slide>
-          
-          <Slide transition={["slide"]} bgColor="black" notes={notes.default}>
-            <Heading size={1} fit caps textColor="tertiary">
-               Long-term Collaboration -> Real Success.
-            </Heading>
-          </Slide>
-          
-          <Slide transition={["slide"]} bgColor="black" notes={notes.needsStories}>
+          <Slide transition={["slide"]} bgColor="black" notes={notes.goodTech}>
             <Heading size={1} caps textColor="primary">
                A Couple Successful Tech Stories
             </Heading>
